@@ -33,7 +33,7 @@ public class AdminController {
         output.setDescription("Dang nhap that bai vui long thu lai");
         if (Strings.isNotEmpty(userDTO.getPassWord()) && userDTO.getPassWord().equals(user.getPassWord())) {
             SessionLogin sessionLogin = new SessionLogin();
-            sessionLogin.setStatus("1");
+            sessionLogin.setStatus(SessionLogin.ONLINE);
             sessionLogin.setUserName(user.getUserName());
             sessionLoginService.save(sessionLogin);
             output.setErrorCode("200");

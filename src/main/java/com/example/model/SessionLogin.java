@@ -5,6 +5,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "session_login")
 public class SessionLogin {
+    public static final String ONLINE = "1";
+    public static final String OFFLINE = "0";
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
